@@ -100,7 +100,7 @@
         function loadvid1() {
 	if(vidplay == 1){
 		var a = document.getElementById("vde1").innerHTML;
-		document.getElementById("vde1").innerHTML = `<svg onclick=loadvid1()" id="vd2"xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width:15px"><path d="M326.1 160l127.4-127.4C451.7 32.39 449.9 32 448 32h-86.06l-128 128H326.1zM166.1 160l128-128H201.9l-128 128H166.1zM497.7 56.19L393.9 160H512V96C512 80.87 506.5 67.15 497.7 56.19zM134.1 32H64C28.65 32 0 60.65 0 96v64h6.062L134.1 32zM0 416c0 35.35 28.65 64 64 64h384c35.35 0 64-28.65 64-64V192H0V416z"/></svg>`;
+		document.getElementById("vde1").innerHTML = `<svg onclick=loadvid1()" id="vd2"xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width:1rem"><path d="M326.1 160l127.4-127.4C451.7 32.39 449.9 32 448 32h-86.06l-128 128H326.1zM166.1 160l128-128H201.9l-128 128H166.1zM497.7 56.19L393.9 160H512V96C512 80.87 506.5 67.15 497.7 56.19zM134.1 32H64C28.65 32 0 60.65 0 96v64h6.062L134.1 32zM0 416c0 35.35 28.65 64 64 64h384c35.35 0 64-28.65 64-64V192H0V416z"/></svg>`;
 		vidplay--;
 	}
 	else if(vidplay == 0){
@@ -112,7 +112,7 @@
 function loadmusic1(){
     if(musicplay == 1){
 		document.getElementById("music1btn").innerHTML = `
-        <svg onclick="loadmusic1()" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width:15px">
+        <svg onclick="loadmusic1()" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width:1rem">
         <path d="M256 32C112.9 32 4.563 151.1 0 288v104C0 405.3 10.75 416 23.1 416S48 405.3 48 392V288c0-114.7 93.34-207.8 208-207.8C370.7 80.2 464 173.3 464 288v104C464 405.3 474.7 416 488 416S512 405.3 512 392V287.1C507.4 151.1 399.1 32 256 32zM160 288L144 288c-35.34 0-64 28.7-64 64.13v63.75C80 451.3 108.7 480 144 480L160 480c17.66 0 32-14.34 32-32.05v-127.9C192 302.3 177.7 288 160 288zM368 288L352 288c-17.66 0-32 14.32-32 32.04v127.9c0 17.7 14.34 32.05 32 32.05L368 480c35.34 0 64-28.7 64-64.13v-63.75C432 316.7 403.3 288 368 288z"/></svg>
         `;
 		musicplay--;

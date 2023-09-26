@@ -178,9 +178,7 @@ body,html{
     z-index: 200;
     filter: drop-shadow(rgba(255, 255, 255, 0) 0px 0px 0px) brightness(0.3);
     cursor: pointer;
-
     /* filter: drop-shadow(2px 4px 50px white); */
-
 }
 .center_light{
     top: -14vh;
