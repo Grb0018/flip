@@ -186,10 +186,10 @@
         left: 17vw;
       }
       #vde1 video{
-        width: 297px;
+        width: 20rem;
         position: absolute;
         top: 10vh;
-        left: -31vh;
+        left: -11rem;
       }
       #vde1 .cls{
         top: 7vh;
@@ -341,7 +341,7 @@
   }  
   #vda{
     position: absolute;
-    left: -8vw;
+    left: -9rem;
     top: 13vw;
   }    
   .turn-page-wrapper{
