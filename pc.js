@@ -5,7 +5,7 @@
     //     location.href = '../Main Book/index .html'
     // })
 
-    var numberOfPages = 4;
+    var numberOfPages = 3;
     $("#nxt").click(function () {  
         var pages=[];
         document.querySelectorAll('.turn-page-wrapper').forEach(item=>{
