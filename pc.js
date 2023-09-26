@@ -2156,24 +2156,15 @@ shareButton.addEventListener('click', event => {
       .catch(console.error);
       }})
 
-      setInterval(()=>{
-  
+    setInterval(()=>{
         var allPage = document.querySelectorAll('.turn-page');
         for (const x of allPage) {
-    
             x.onclick=(e)=>{
-             
                 if(parseInt(e.target.parentElement.parentElement.getAttribute('page'))%2 ==0){
-                  
-                    let valpg = parseInt(document.getElementById('pgval').innerText);
-                    document.getElementById('pgval').innerHTML= valpg - 2 ;
                     $('#album').turn('previous');
                 }else{
-                     let valpg = parseInt(document.getElementById('pgval').innerText);
-                    document.getElementById('pgval').innerHTML= valpg + 2 ;
                     $('#album').turn('next');
                 }
-    
             }
         }
     },500);
