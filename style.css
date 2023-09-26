@@ -1,0 +1,344 @@
+*{
+    padding: 0;
+    margin: 0;
+    position: relative;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+body,html{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+.stage{
+    /* display: flex; */
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(10, 10, 26);
+    background-image: url(./image/bg.png);
+    background-size: cover;
+}
+.floor{
+    position: absolute;
+    width: 100vw;
+    height: 14vh;
+    bottom: -2vh;
+    filter: brightness(0.3);
+}
+.curtain_left{
+    position: absolute;
+    width: 51.5vw;
+    height: 93vh;
+    filter: drop-shadow(2px 15px 30px black);
+    left: -1rem;
+    transform: translateX(0);
+    transition: 3s ease-in-out;
+    z-index: 300;
+}
+
+.curtain_right{
+    position: absolute;
+    width: 51.5vw;
+    height: 93vh;
+    filter: drop-shadow(2px 15px 30px black);
+    right: -1rem;
+    z-index: 100;
+    transform: translateX(0);
+    transition: 3s ease-in-out;
+    z-index: 300;
+}
+.short_curtain_left{
+    position: absolute;
+    width: 5vw;
+    left: 46.5vw;
+    height: 97vh;
+    top: -2rem;
+    transform: translateX(0);
+    transition: 3s ease-in-out;
+    z-index: 300;
+}
+
+.short_curtain_right{
+    position: absolute;
+    width: 5vw;
+    right: 46.5vw;
+    height: 95vh;
+    top: -1rem;
+    z-index: 100;
+    transform: translateX(0);
+    transition: 3s ease-in-out;
+    z-index: 300;
+}
+.top_curtain_left{
+    width: 16rem;
+    height: 10rem;
+    position: absolute;
+    top: -3rem;
+    left: -6.5rem;
+    filter: drop-shadow(2px 4px 30px black);
+    z-index: 301;
+    rotate: 13deg;
+    transition: 3s ease-in-out;
+}
+.top_curtain_left2{
+    width: 16rem;
+    height: 10rem;
+    left: -11rem;
+    top: -1rem;
+    filter: drop-shadow(2px 4px 30px black);
+    z-index: 300;
+    rotate: 34deg;
+    transition: 3s ease-in-out;
+}
+.top_curtain_right{
+    width: 16rem;
+    height: 10rem;
+    position: absolute;
+    top: -2rem;
+    right: -8rem;
+    filter: drop-shadow(2px 4px 30px black);
+    z-index: 300;
+    rotate: 37deg;
+    transition: 3s ease-in-out;
+}
+.top_curtain_right2{
+    position: absolute;
+    width: 16rem;
+    height: 10rem;
+    right: -4rem;
+    top: -4rem;
+    filter: drop-shadow(2px 4px 30px black);
+    z-index: 301;
+    rotate: 34deg;
+    transition: 3s ease-in-out;
+}
+.left_light{
+    position: absolute;
+    top: -6rem;
+    left: -5rem;
+    opacity: 0;
+    z-index: 300;
+    /* height: 116vh; */
+    height: 0;
+    transform-origin: 10% 2%;
+    rotate: 351deg;
+    transition : 0.1s ease-in;
+    filter: drop-shadow(2px 4px 30px white);
+}
+.right_light{
+    position: absolute;
+    /* height: 119vh; */
+    height: 0;
+    transform-origin: 100% 0%;
+    right: -2rem;
+    top: -6rem;
+    z-index: 300;
+    rotate: 7deg;
+    opacity: 0;
+    transition : 0.1s ease-in;
+    filter: drop-shadow(2px 4px 30px white);
+}
+#btn{
+    z-index: 1000;
+}
+.tableContainer{
+    position: absolute;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    z-index: 200;
+    transition: 0.5s ease;
+    bottom: -15vh;
+}
+.table{
+    position: absolute;
+    width: 14vw;
+    z-index: 200;
+    transition: 0.5s ease;
+    transition: 1s ease;
+    filter: brightness(0.3);
+    /* filter: drop-shadow(2px 63px 40px white); */
+}
+.bright1{
+    display: block;
+    position: absolute;
+    width: 9rem;
+    height: 9rem;
+    background: white;
+}
+.book1{
+    position: relative;
+    width: 8%;
+    height: auto;
+    top: -19vh;
+    box-shadow: 0px 3px 0px 0px #00000021;
+    z-index: 200;
+    filter: drop-shadow(rgba(255, 255, 255, 0) 0px 0px 0px) brightness(0.3);
+    cursor: pointer;
+
+    /* filter: drop-shadow(2px 4px 50px white); */
+
+}
+.center_light{
+    top: -14vh;
+    width: 131vw;
+    height: 0;
+    opacity: 0;
+}
+.light_container{
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+}
+.bookDiv{
+    position: absolute;
+    height: 98vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.rotate{
+    display: none;
+    position: absolute;
+    top:0;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+.rotate img{
+    width: 14rem;
+    height: auto;
+}
+.clsv{
+    width: fit-content;
+    position: absolute;
+    top: 7vh;
+    left: 24vh;
+    padding: 0.2vw 0.55vw;
+    background: #424242;
+    border-radius: 5vw;
+    color: whitesmoke;
+    font-size: 1rem;
+    font-family: monospace;
+}
+
+@keyframes opacity {
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes opacity1 {
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes brighting {
+    100%{
+       filter: drop-shadow(#dfd7d9 0px 0px 60px) brightness(0.9);
+    }
+}
+@keyframes brighting_table {
+    100%{
+       filter: brightness(1);
+    }
+}
+@media screen and (max-width: 2560px) {
+    .left_light{
+        rotate: 343deg;
+    }
+    .right_light{
+        rotate: 13deg;
+    }
+    .table{
+        width: 10vw;
+        bottom: 8vw;
+    }
+    .book1{
+        width: 22%;
+        height: auto;
+        top: -17vw;
+        filter: drop-shadow(rgba(255, 255, 255, 0) 0px 0px 0px) brightness(0.3);
+    }
+}
+@media screen and (max-width: 1440px) {
+    .left_light{
+        rotate: 345deg;
+    }
+    .right_light{
+        rotate: 11deg;
+    }
+    .book1 {
+        width: 21.5%;
+        height: auto;
+        top: -8.5vw;
+        filter: drop-shadow(rgba(255, 255, 255, 0) 0px 0px 0px) brightness(0.3);
+    }
+    .tableContainer{
+        bottom: 8vh;
+    }
+    .table {
+        width: 10vw;
+        bottom: -0.5vw;
+    }
+}
+
+@media screen and (max-width: 1240px) {
+    .left_light{
+        rotate: 353deg;
+    }
+    .right_light{
+        rotate: 3deg;
+    }
+    .book1 {
+        height: 59vh;
+        width: 40vh;
+        top: -15vh;
+        filter: drop-shadow(rgba(255, 255, 255, 0) 0px 0px 0px) brightness(0.3);
+    }
+    .tableContainer{
+        bottom: 8vh;
+    }
+    .table {
+        width: auto;
+        height: 22vh;
+        bottom: -2vw;
+    }
+  }
+@media screen and (max-width: 786px) {
+    .left_light{
+        rotate: 2deg;
+    }
+    .right_light{
+        rotate: 354deg;
+    }
+    .table {
+        width: auto;
+        height: 22vh;
+        bottom: -3vw;
+    }
+    .book1{
+        width: 44vh;
+        height: 33vw;
+        top: -13vh;
+        filter: drop-shadow(rgba(255, 255, 255, 0) 0px 0px 0px) brightness(0.3);
+    
+    }
+
+}
+@media screen and (max-width: 500px) {
+.table{
+    width: 35vw;
+}
+.book1 {
+    width: 39%;
+    height: auto;
+    top: -27vw;
+    filter: drop-shadow(rgba(255, 255, 255, 0) 0px 0px 0px) brightness(0.3);
+}
+}
