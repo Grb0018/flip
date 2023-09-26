@@ -10,7 +10,6 @@ window.onload=()=>{
         $('.stage').css({display:"none"});
     }else{
         $('.rotate').css({display:"none"});
-        $('.stage').css({display:"flex"});
         $.getScript("./pc.js");
         document.onclick=()=>{
             lc.style.transform="translateX(-40vw)";
@@ -155,6 +154,13 @@ window.onload=()=>{
         
             },3000)
         }
+        var img = document.createElement('img');
+        img.src='./image/bg.png';
+        img.onload=()=>{
+            $('.loading_carry').fadeOut();
+            $('.stage').css({display:"flex"});
+        }
+        
     }
     screen.orientation.onchange=(e)=>{
        window.location.reload();

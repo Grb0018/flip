@@ -8,8 +8,43 @@
 	<script src="./jquery-ui.js"></script>
 
     <title>Flip Book</title>
+
+    <style>
+        .loading_carry{
+            background-color: #151a2a;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            z-index: 2000;
+            top: 0;
+        }
+        .loading_gif{
+            width: 5rem;
+            height: auto;
+            position: relative;
+            opacity: 0.3;
+            animation: glow 3s ease-in-out infinite;
+        }
+        @keyframes glow {
+            0%{
+                opacity: 0.3;
+            }
+            50%{
+                opacity: 1;
+            }
+            100%{
+                opacity: 0.3;
+            }
+        }
+    </style>
 </head>
 <body>
+    <div class="loading_carry">
+        <img src="./BITBLITS-LOGO-min.webp" alt="logo" class="loading_gif">
+    </div>
     <div class="rotate">
         <img src="./image/rotate.png" alt="rotate" >
     </div>
