@@ -17,8 +17,31 @@
             $('#album').turn('next');
         }
     });
+    $("#mnxt").click(function () {  
+        var pages=[];
+        document.querySelectorAll('.turn-page-wrapper').forEach(item=>{
+            if(parseInt($(item).css('z-index'))==numberOfPages+1){
+                pages.push(parseInt(item.getAttribute('page')));
+            }
+        })
+        if(pages[0] != numberOfPages+1 || pages[1] != numberOfPages+1){
+            $('#album').turn('next');
+        }
+    });
 
     $("#bck").click(function () {
+
+        var pages=[];
+        document.querySelectorAll('.turn-page-wrapper').forEach(item=>{
+            if(parseInt($(item).css('z-index'))==numberOfPages+1){
+                pages.push(parseInt(item.getAttribute('page')));
+            }
+        })
+        if(pages[0] != 1){
+            $('#album').turn('previous');
+        }
+    });
+    $("#mbck").click(function () {
 
         var pages=[];
         document.querySelectorAll('.turn-page-wrapper').forEach(item=>{
@@ -2076,10 +2099,15 @@
         $('#number-pages').html(numberOfPages);
 
         $('#page-number').keydown(function (e) {
-
             if (e.keyCode == 13)
                 if(parseInt($('#page-number').val())>-1 && parseInt($('#page-number').val())<numberOfPages+1){
                     $('#album').turn('page', parseInt($('#page-number').val())+1);
+                }
+        });
+        $('#mpageNo').keydown(function (e) {
+            if (e.keyCode == 13)
+                if(parseInt($('#mpageNo').val())>-1 && parseInt($('#mpageNo').val())<numberOfPages+1){
+                    $('#album').turn('page', parseInt($('#mpageNo').val())+1);
                 }
         });
     });
@@ -2145,6 +2173,17 @@ function music1cls(){
 }
 var shareButton= document.getElementById('zoom2')
 shareButton.addEventListener('click', event => {
+    var a = document.URL;
+    if (navigator.share) { 
+     navigator.share({
+        title: 'Flip Book By Bitblits.',
+        url: a
+      }).then(() => {
+        console.log('Thanks for sharing!');
+      })
+      .catch(console.error);
+      }})
+document.getElementById('mshare').addEventListener('click', event => {
     var a = document.URL;
     if (navigator.share) { 
      navigator.share({

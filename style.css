@@ -246,6 +246,53 @@ body,html{
        filter: brightness(1);
     }
 }
+#mbtn{
+display: none;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 1rem 0.28rem;
+border-radius: 1vw;
+background-color: #edc78a;
+position: fixed;
+gap:1rem;
+top:10vh;
+z-index: 2000;
+font-size: 0.67rem;
+border-top-left-radius: 0;
+border-bottom-left-radius: 0;
+width: 3rem;
+text-align: center;
+}
+#mbtn span{
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+padding: 0.5rem 0.3rem;
+background-color: white;
+color: grey;
+font-family: sans-serif;
+gap: 0.2rem;
+border-radius: 0.4rem;
+box-shadow: -2px 3px 0px lightgrey;
+min-width: 80%;
+max-width: 80%;
+}
+#mbtn span input{
+    background: #cdc8c8;
+    border: 0;
+    font-size: 0.6rem;
+    width: 1.7rem;
+    height: 1.5rem;
+    text-align: center;
+}
+#mbtn i{
+    padding: 0.38rem;
+    background: #cdc8c8;
+    color: black;
+    border-radius: 2vw;
+}
 @media screen and (max-width: 2560px) {
     .left_light{
         rotate: 343deg;
